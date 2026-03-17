@@ -16,29 +16,32 @@ const s = (videoId: string, label: string, location: string, category: StreamDat
 });
 
 const defaultStreams: StreamData[] = [
-  // News
-  s('X6U_ufG4bDk', 'Aaj Tak', 'New Delhi', 'news'),
-  s('eJGJ0rtOK_U', 'NDTV 24x7', 'New Delhi', 'news'),
-  s('lq6F5S0v68o', 'Republic Bharat', 'New Delhi', 'news'),
-  s('H9bLaloxvc8', 'IndiaTV', 'New Delhi', 'news'),
+  s('Nq2wYlWFucg', 'Aaj Tak', 'New Delhi', 'news'),
+  s('10T3CfmgDlc', 'NDTV 24x7', 'New Delhi', 'news'),
+  s('Kw2tcW4OmfU', 'Republic Bharat', 'New Delhi', 'news'),
+  s('e1FIApIafWE', 'IndiaTV', 'New Delhi', 'news'),
   s('241Qgc9dYWQ', 'News18 India', 'New Delhi', 'news'),
-  s('ANrZ4S-SzdI', 'Times Now', 'New Delhi', 'news'),
-  s('PGHraXz3Ok8', 'ABP News', 'New Delhi', 'news'),
-  s('WquRAK-XoV4', 'Zee News', 'New Delhi', 'news'),
+  s('vze6x-3BfPA', 'Times Now', 'New Delhi', 'news'),
+  s('iOmtxPLKk8k', 'ABP News', 'New Delhi', 'news'),
+  s('UIvQ-xt-vfo', 'Zee News', 'New Delhi', 'news'),
   s('nSpwwcHVp80', 'TV9 Bharatvarsh', 'New Delhi', 'news'),
   s('Io-G_aiF8HA', 'News18 Aar Paar', 'New Delhi', 'news'),
   s('b2CNZHW0tks', 'News18 Debate', 'New Delhi', 'news'),
-  s('UkdPITIsSsY', 'Zee News Top', 'New Delhi', 'news'),
-  s('B2Z7zgNPN1w', 'TV9 Updates', 'New Delhi', 'news'),
+  s('TxoAYWg64Ao', 'DD News', 'New Delhi', 'news'),
+  s('v6c_DOAgIpI', 'WION', 'New Delhi', 'news'),
+  s('UNDPXlT1F4I', 'NDTV India', 'New Delhi', 'news'),
+  s('xRzSfiYJRQw', 'News24', 'New Delhi', 'news'),
+  s('dtDwzu8UEsc', 'Firstpost', 'New Delhi', 'news'),
+  s('gCNeDWCI0vo', 'Al Jazeera', 'Doha', 'news'),
 
-  // Temple / Spiritual
-  s('7e49g5QwBe4', 'Somnath Temple', 'Gujarat', 'temple'),
+  s('QRHv08zLoU4', 'Somnath Temple', 'Gujarat', 'temple'),
   s('41dgX-3yER0', 'Vaishno Devi', 'Katra, J&K', 'temple'),
-  s('59MySSkC_to', 'Mahakaleshwar', 'Ujjain, MP', 'temple'),
-  s('nfuxz-Jki7w', 'ISKCON Bangalore', 'Bangalore', 'temple'),
+  s('wWqOz9_nudI', 'Mahakaleshwar', 'Ujjain, MP', 'temple'),
+  s('j1q1dE_eGew', 'ISKCON Vrindavan', 'Vrindavan', 'temple'),
   s('SXALgikY3NM', 'Hare Krsna TV', 'Mumbai', 'temple'),
-  s('iAWLlP76OPw', 'Swaminarayan Live', 'Surat', 'temple'),
-  s('HATWLjmnih8', 'Swaminarayan Bavla', 'Gujarat', 'temple'),
+  s('v9yY2GC_a5Y', 'SVBC Tirumala', 'Tirupati', 'temple'),
+  s('gxgoTvSzC84', 'Shirdi Sai Baba', 'Shirdi', 'temple'),
+  s('yxunyAckFcg', 'Kashi Vishwanath', 'Varanasi', 'temple'),
 ];
 
 export default defaultStreams;

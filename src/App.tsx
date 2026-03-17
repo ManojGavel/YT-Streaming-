@@ -21,6 +21,7 @@ export default function App() {
 
   const activeStream = streams.find((s) => s.id === activeId) ?? streams[0];
   const filmstrip = useMemo(() => streams.filter((s) => s.id !== activeId), [streams, activeId]);
+  const visibleStreams = useMemo(() => streams.slice(0, gridCols * gridCols), [streams, gridCols]);
 
   useEffect(() => {
     if (!streams.find((s) => s.id === activeId) && streams.length > 0) {
@@ -89,8 +90,8 @@ export default function App() {
 
       {/* ═══════ GALLERY VIEW — Grid of all videos ═══════ */}
       {view === 'gallery' && (
-        <div className="grid-view" style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}>
-          {streams.map((stream, i) => (
+        <div className="grid-view" style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)`, gridTemplateRows: `repeat(${gridCols}, 1fr)` }}>
+          {visibleStreams.map((stream, i) => (
             <GridTile
               key={stream.id}
               stream={stream}
@@ -204,7 +205,7 @@ function GridTile({
   return (
     <div className={`g-tile ${isActive ? 'active' : ''}`} onClick={onSelect}>
       <img src={thumb} className="g-thumb" alt="" />
-      {loaded && <iframe src={src} className="g-iframe" allow="autoplay; encrypted-media" allowFullScreen title={stream.label} />}
+      {loaded && <iframe src={src} className="g-iframe" allow="autoplay; encrypted-media" allowFullScreen title={stream.label} onError={() => console.error(`[Stream Error] ${stream.label} (${stream.videoId}) failed to load`)} />}
       <div className="g-label">
         <span className={`cat-dot cat-${stream.category}`}>●</span>
         <span className="g-name">{stream.label}</span>

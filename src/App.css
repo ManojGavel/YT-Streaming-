@@ -172,8 +172,8 @@
   gap: 6px;
   padding: 6px;
   flex: 1;
-  overflow-y: auto;
-  align-content: start;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .g-tile {
@@ -184,13 +184,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.g-tile::before {
-  content: '';
-  display: block;
-  padding-top: 56.25%;
-}
+}\n
 
 .g-tile:hover {
   border-color: #6264a7;
